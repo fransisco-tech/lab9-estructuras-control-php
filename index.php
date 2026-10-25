@@ -6,25 +6,23 @@
  */
 
 // ---------- PARTE 0 · TUS DATOS ----------
-// TODO 0.1: define las constantes SEMILLA (últimos 3 dígitos de tu cédula, como número),
-//           NOMBRE y APELLIDO.
-// TODO 0.2: crea $nombreCompleto, $edad, $dia, $mes, $nota1, $nota2, $nota3, $monto,
-//           $esMiembro, $hora, $huella, $descuento y $vacio (fórmulas en el documento).
+//const SEMILLA = 155;
+const NOMBRE = "Fransisco";
+const APELLIDO = "Quiñones";
 
-// ---------- EJERCICIO 1 · Boleto de cine (if / elseif / else) ----------
-// TODO 1
-
-// ---------- EJERCICIO 2 · Notas (elseif, ternario, &&) ----------
-// TODO 2
-
-// ---------- EJERCICIO 3 · Día de la semana (switch) ----------
-// TODO 3
-
-// ---------- EJERCICIO 4 · Mes y estación (match) ----------
-// TODO 4
-
-// ---------- EJERCICIO 5 · Caja de la tienda (reto integrador) ----------
-// TODO 5
+$nombreCompleto = NOMBRE . " " . APELLIDO;
+$edad = 8 + (SEMILLA % 70);
+$dia = (SEMILLA % 7) + 1;
+$mes = (SEMILLA % 12) + 1;
+$nota1 = 40 + (SEMILLA % 61);
+$nota2 = 40 + ((SEMILLA * 3) % 61);
+$nota3 = 40 + ((SEMILLA * 7) % 61);
+$monto = 20 + (SEMILLA % 181);
+$esMiembro = (SEMILLA % 2) == 0;
+$hora = SEMILLA % 24;
+$huella = (SEMILLA * 13 + 91) % 1000;
+$descuento = SEMILLA * 0.001;
+$vacio = null;
 ?>
 <!DOCTYPE html>
 <html lang="es">
