@@ -6,9 +6,11 @@
  */
 
 // ---------- PARTE 0 · TUS DATOS ----------
-//const SEMILLA = 155;
-const NOMBRE = "fransisco";
-const APELLIDO = "quinones";
+<?php
+// ---------- PARTE 0 · TUS DATOS ----------
+const SEMILLA = 155;
+const NOMBRE = "Fransisco";
+const APELLIDO = "Quiñones";
 
 $nombreCompleto = NOMBRE . " " . APELLIDO;
 $edad = 8 + (SEMILLA % 70);
@@ -23,6 +25,33 @@ $hora = SEMILLA % 24;
 $huella = (SEMILLA * 13 + 91) % 1000;
 $descuento = SEMILLA * 0.001;
 $vacio = null;
+
+// ---------- EJERCICIO 1 · BOLETO DE CINE ----------
+const PRECIO_NINO = 3.00;
+const PRECIO_JOVEN = 4.50;
+const PRECIO_ADULTO = 7.00;
+const PRECIO_JUBILADO = 3.50;
+
+if ($edad < 12) {
+    $categoria = "Niño";
+    $precio = PRECIO_NINO;
+} elseif ($edad < 18) {
+    $categoria = "Joven";
+    $precio = PRECIO_JOVEN;
+} elseif ($edad < 60) {
+    $categoria = "Adulto";
+    $precio = PRECIO_ADULTO;
+} else {
+    $categoria = "Jubilado";
+    $precio = PRECIO_JUBILADO;
+}
+
+$miercoles = "No";
+if ($dia == 3) {
+    $precio = $precio * 0.5;
+    $miercoles = "Sí";
+}
+?>
 ?>
 <!DOCTYPE html>
 <html lang="es">
