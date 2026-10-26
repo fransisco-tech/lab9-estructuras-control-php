@@ -172,9 +172,14 @@ $total = $base + ($base * ITBMS);
 <head>
   <meta charset="UTF-8">
   <meta name="lab9-huella" content="<?= $huella ?>">
-  <title>Lab 9 · Estructuras de control</title>
-  <!-- TODO CSS-1: enlaza css/estilos.css (CSS externo) -->
-  <!-- TODO CSS-2: agrega un <style> interno con al menos 2 reglas -->
+  <style>
+  h2 {
+    color: #1f3a5f;
+  }
+  #autor {
+    font-style: italic;
+  }
+</style>
 </head>
 <body>
   <header>
