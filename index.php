@@ -1,11 +1,5 @@
 <?php
-/*
- * LABORATORIO #9 · Estructuras de control en PHP
- * Sigue el documento del estudiante. Escribe tu código SOLO en las zonas marcadas con TODO.
- * Recuerda: un commit por ejercicio (ej0, ej1, ... css, final).
- */
 
-// ---------- PARTE 0 · TUS DATOS ----------
 const SEMILLA = 155;
 const NOMBRE = "Fransisco";
 const APELLIDO = "Quiñones";
@@ -24,7 +18,7 @@ $huella = (SEMILLA * 13 + 91) % 1000;
 $descuento = SEMILLA * 0.001;
 $vacio = null;
 
-// ---------- EJERCICIO 1 · BOLETO DE CINE ----------
+
 const PRECIO_NINO = 3.00;
 const PRECIO_JOVEN = 4.50;
 const PRECIO_ADULTO = 7.00;
@@ -50,7 +44,7 @@ if ($dia == 3) {
     $miercoles = "Sí";
 }
 
-// ---------- EJERCICIO 2 · NOTAS ----------
+
 $promedio = ($nota1 + $nota2 + $nota3) / 3;
 
 if ($promedio >= 90) {
@@ -69,7 +63,7 @@ $estado = ($promedio >= 70) ? "Aprobado" : "Reprobado";
 
 $cuadroHonor = ($promedio >= 90 && $nota1 >= 80 && $nota2 >= 80 && $nota3 >= 80) ? "Sí" : "No";
 
-// ---------- EJERCICIO 3 · DÍA DE LA SEMANA ----------
+
 switch ($dia) {
     case 1:
         $nombreDia = "Lunes";
@@ -112,7 +106,7 @@ switch ($dia) {
         $tipoDia = "Desconocido";
 }
 
-// ---------- EJERCICIO 4 · MES Y ESTACIÓN ----------
+
 $nombreMes = match ($mes) {
     1 => "Enero",
     2 => "Febrero",
@@ -135,7 +129,7 @@ $estacion = match ($mes) {
     default => "Desconocida",
 };
 
-// ---------- EJERCICIO 5 · CAJA DE LA TIENDA ----------
+
 const ITBMS = 0.07;
 
 // 1. Porcentaje de descuento por monto
@@ -167,7 +161,7 @@ if ($hora >= 22 || $hora < 6) {
 // 5. Total con ITBMS
 $total = $base + ($base * ITBMS);
 
-// ---------- CSS · CLASE SEGÚN ESTADO ----------
+
 $claseEstado = ($estado == "Aprobado") ? "ok" : "error";
 ?>
 <!DOCTYPE html>
