@@ -6,8 +6,6 @@
  */
 
 // ---------- PARTE 0 · TUS DATOS ----------
-<?php
-// ---------- PARTE 0 · TUS DATOS ----------
 const SEMILLA = 155;
 const NOMBRE = "Fransisco";
 const APELLIDO = "Quiñones";
@@ -51,14 +49,31 @@ if ($dia == 3) {
     $precio = $precio * 0.5;
     $miercoles = "Sí";
 }
-?>
+
+// ---------- EJERCICIO 2 · NOTAS ----------
+$promedio = ($nota1 + $nota2 + $nota3) / 3;
+
+if ($promedio >= 90) {
+    $letra = "A";
+} elseif ($promedio >= 80) {
+    $letra = "B";
+} elseif ($promedio >= 70) {
+    $letra = "C";
+} elseif ($promedio >= 60) {
+    $letra = "D";
+} else {
+    $letra = "F";
+}
+
+$estado = ($promedio >= 70) ? "Aprobado" : "Reprobado";
+
+$cuadroHonor = ($promedio >= 90 && $nota1 >= 80 && $nota2 >= 80 && $nota3 >= 80) ? "Sí" : "No";
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="lab9-huella" content="<?= $huella ?>">
-  <!-- TODO 0.3: <meta name="lab9-huella" content="..."> con el valor de $huella -->
   <title>Lab 9 · Estructuras de control</title>
   <!-- TODO CSS-1: enlaza css/estilos.css (CSS externo) -->
   <!-- TODO CSS-2: agrega un <style> interno con al menos 2 reglas -->
@@ -67,10 +82,9 @@ if ($dia == 3) {
   <header>
     <!-- TODO CSS-3: agrega un atributo style (CSS en línea) a este h1 -->
     <h1>Laboratorio #9 · Estructuras de control</h1>
-    <p id="autor">Autor: <?= fransisco . " " . quinones ?></p>
+    <p id="autor">Autor: <?= $nombreCompleto ?></p>
   </header>
 
-  <!-- TODO 0.5: el id de <main> es "lab9-" + tu apellido en minúsculas, sin tildes (ver documento) -->
   <main id="lab9-quinones">
 
     <section id="ej0">
@@ -81,23 +95,23 @@ if ($dia == 3) {
         </thead>
         <tbody>
           <tr><td>$nombreCompleto</td><td><?= gettype($nombreCompleto) ?></td></tr>
-<tr><td>$edad</td><td><?= gettype($edad) ?></td></tr>
-<tr><td>$esMiembro</td><td><?= gettype($esMiembro) ?></td></tr>
-<tr><td>$descuento</td><td><?= gettype($descuento) ?></td></tr>
-<tr><td>$vacio</td><td><?= gettype($vacio) ?></td></tr>
+          <tr><td>$edad</td><td><?= gettype($edad) ?></td></tr>
+          <tr><td>$esMiembro</td><td><?= gettype($esMiembro) ?></td></tr>
+          <tr><td>$descuento</td><td><?= gettype($descuento) ?></td></tr>
+          <tr><td>$vacio</td><td><?= gettype($vacio) ?></td></tr>
         </tbody>
       </table>
     </section>
 
     <section id="ej1">
       <h2>Ejercicio 1 · Boleto de cine</h2>
-      <p id="ej1-res"><!-- TODO 1 --></p>
+      <p id="ej1-res">Categoría: <?= $categoria ?> | Precio final: B/. <?= number_format($precio, 2) ?> | Miércoles 50%: <?= $miercoles ?></p>
     </section>
 
     <section id="ej2">
       <h2>Ejercicio 2 · Notas</h2>
       <!-- TODO CSS-4: agrega la clase "ok" o "error" con PHP según el estado -->
-      <p id="ej2-res" class="resultado"><!-- TODO 2 --></p>
+      <p id="ej2-res" class="resultado">Promedio: <?= number_format($promedio, 2) ?> | Letra: <?= $letra ?> | Estado: <?= $estado ?> | Cuadro de honor: <?= $cuadroHonor ?></p>
     </section>
 
     <section id="ej3">
