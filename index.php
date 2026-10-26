@@ -7,8 +7,8 @@
 
 // ---------- PARTE 0 · TUS DATOS ----------
 //const SEMILLA = 155;
-const NOMBRE = "Fransisco";
-const APELLIDO = "Quiñones";
+const NOMBRE = "fransisco";
+const APELLIDO = "quinones";
 
 $nombreCompleto = NOMBRE . " " . APELLIDO;
 $edad = 8 + (SEMILLA % 70);
@@ -28,7 +28,7 @@ $vacio = null;
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="lab9-huella" content="<?= $huella ?>">
   <!-- TODO 0.3: <meta name="lab9-huella" content="..."> con el valor de $huella -->
   <title>Lab 9 · Estructuras de control</title>
   <!-- TODO CSS-1: enlaza css/estilos.css (CSS externo) -->
@@ -38,11 +38,11 @@ $vacio = null;
   <header>
     <!-- TODO CSS-3: agrega un atributo style (CSS en línea) a este h1 -->
     <h1>Laboratorio #9 · Estructuras de control</h1>
-    <p id="autor"><!-- TODO 0.4: "Autor: Nombre Apellido" --></p>
+    <p id="autor">Autor: <?= fransisco . " " . quinones ?></p>
   </header>
 
   <!-- TODO 0.5: el id de <main> es "lab9-" + tu apellido en minúsculas, sin tildes (ver documento) -->
-  <main id="">
+  <main id="lab9-quinones">
 
     <section id="ej0">
       <h2>Ejercicio 0 · Tipos de datos</h2>
@@ -51,7 +51,11 @@ $vacio = null;
           <tr><th>Variable</th><th>Tipo</th></tr>
         </thead>
         <tbody>
-          <!-- TODO 0.6: 5 filas <tr> con el nombre de la variable y su gettype() -->
+          <tr><td>$nombreCompleto</td><td><?= gettype($nombreCompleto) ?></td></tr>
+<tr><td>$edad</td><td><?= gettype($edad) ?></td></tr>
+<tr><td>$esMiembro</td><td><?= gettype($esMiembro) ?></td></tr>
+<tr><td>$descuento</td><td><?= gettype($descuento) ?></td></tr>
+<tr><td>$vacio</td><td><?= gettype($vacio) ?></td></tr>
         </tbody>
       </table>
     </section>
@@ -87,6 +91,6 @@ $vacio = null;
 
   </main>
 
-  <footer id="firma"><!-- TODO 0.7: "Lab 9 · Nombre Apellido · Semilla N" --></footer>
+  <footer id="firma">Lab 9 · <?= NOMBRE . " " . APELLIDO ?> · Semilla <?= SEMILLA ?></footer>
 </body>
 </html>
