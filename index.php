@@ -166,25 +166,29 @@ if ($hora >= 22 || $hora < 6) {
 
 // 5. Total con ITBMS
 $total = $base + ($base * ITBMS);
+
+// ---------- CSS · CLASE SEGÚN ESTADO ----------
+$claseEstado = ($estado == "Aprobado") ? "ok" : "error";
 ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="lab9-huella" content="<?= $huella ?>">
+  <title>Lab 9 · Estructuras de control</title>
+  <link rel="stylesheet" href="css/estilos.css">
   <style>
-  h2 {
-    color: #1f3a5f;
-  }
-  #autor {
-    font-style: italic;
-  }
-</style>
+    h2 {
+      color: #1f3a5f;
+    }
+    #autor {
+      font-style: italic;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <!-- TODO CSS-3: agrega un atributo style (CSS en línea) a este h1 -->
-    <h1>Laboratorio #9 · Estructuras de control</h1>
+    <h1 style="color: #ffffff; text-align: center;">Laboratorio #9 · Estructuras de control</h1>
     <p id="autor">Autor: <?= $nombreCompleto ?></p>
   </header>
 
@@ -213,8 +217,7 @@ $total = $base + ($base * ITBMS);
 
     <section id="ej2">
       <h2>Ejercicio 2 · Notas</h2>
-      <!-- TODO CSS-4: agrega la clase "ok" o "error" con PHP según el estado -->
-      <p id="ej2-res" class="resultado">Promedio: <?= number_format($promedio, 2) ?> | Letra: <?= $letra ?> | Estado: <?= $estado ?> | Cuadro de honor: <?= $cuadroHonor ?></p>
+      <p id="ej2-res" class="resultado <?= $claseEstado ?>">Promedio: <?= number_format($promedio, 2) ?> | Letra: <?= $letra ?> | Estado: <?= $estado ?> | Cuadro de honor: <?= $cuadroHonor ?></p>
     </section>
 
     <section id="ej3">
